@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+	<form action="{{ url_for('index') }}" method="get">
+		<table id="board" align="center" cellspacing="0" cellpadding="0">
+			{% for i in range(9) %}
+				<tr>
+				{% for j in range(9) %}
+					{% if fixedCells[i][j] %}
+						<td><input class="cell fixedCell cellRow{{ i }} cellCol{{ j }}" type="text" maxlength=1 value="{{ solution[i][j] }}" readonly></td>
+					{% else %}
+						<td><input class="cell cellRow{{ i }} cellCol{{ j }}" type="text" maxlength=1 value="{{ solution[i][j] }}" readonly></td>
+					{% endif %}
+				{% endfor %}
+				</tr>
+			{% endfor %}
+		</table>
+		<br>
+		<input id="buttons" type="submit" value="Solve Another">
+	</form>
+
+{% endblock %}

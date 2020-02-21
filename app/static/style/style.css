@@ -1,0 +1,60 @@
+.cell {
+	color: #000000;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    font-size: 25px;
+    background-color: #FFFFFF;
+    outline: none;
+}
+
+.fixedCell {
+	color: #389CFF;
+}
+
+td {
+	border: 1px solid #000000;
+	text-align: center;
+	vertical-align: middle;  
+}
+
+.cellRow0, .cellRow3, .cellRow6 {
+	border-top: 2px solid #000000;
+}
+
+.cellRow8 {
+	border-bottom: 2px solid #000000;
+}
+
+.cellCol0, .cellCol3, .cellCol6 {
+	border-left: 2px solid #000000;
+}
+
+.cellCol8 {
+	border-right: 2px solid #000000;
+}
+
+#title {
+	text-align: center;
+}
+
+#author {
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+#buttons {
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	height: 40px;
+}
+
+#unsolvableText {
+	text-align: center;
+}

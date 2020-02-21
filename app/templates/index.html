@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+	<form action="{{ url_for('solved') }}" method="post">
+		<table id="board" align="center" cellspacing="0" cellpadding="0" border="0">
+			{% for i in range(9) %}
+				<tr>
+				{% for j in range(9) %}
+					<td><input class="cell cellRow{{ i }} cellCol{{ j }}" type="text" pattern="[1-9]" title="Number 1-9" maxlength=1 name='cell{{ j+i*9 }}'></td>
+				{% endfor %}
+				</tr>
+			{% endfor %}
+		</table>
+		<br>
+		<input id="buttons" type="submit" value="Solve">
+		</form>
+
+{% endblock %}
